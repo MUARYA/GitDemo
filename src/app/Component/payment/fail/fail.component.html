@@ -1,0 +1,21 @@
+<img src="end.jpg"/>
+<img [src]="imagepath" style="position:absolute;left: 0%;width:100%;height:100%"/>
+<div class="center">
+<div class="content">
+    <div class="header">
+        <h2>Failed</h2>
+        <label for="click" class="bi bi-x"></label>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="currentColor" class="bi bi-x text-white" viewBox="0 0 16 16" style="position: absolute; right:20px;top:20px;color:black;font-weight: bold;cursor:pointer">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+    </div>
+    <label for="click" class="bi bi-x-circle"></label>
+    <svg xmlns="http://www.w3.org/2000/svg" width="30%" height="50%" fill="currentColor" class="bi bi-x-circle text-danger" viewBox="0 0 16 16" style="position: absolute; right:40%;top:20% ">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+      </svg>
+      <p>Payment Failed </p>
+      <div class="line"></div>
+      <button type="button" class="btn btn-danger text-white" (click)="close()" style="position: absolute;right:4%;bottom: 3% ">Close</button>
+</div>
+</div>

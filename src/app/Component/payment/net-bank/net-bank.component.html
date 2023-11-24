@@ -1,0 +1,279 @@
+<body>
+    <div class="sty" style="background-color: rgb(110, 194, 194); ">
+        <ul type="none">
+          <li><a routerLink="/gateway" routerLinkActive="active" class="nav-link text-white">Back</a>
+          </li>
+        </ul>
+        </div>
+<img src="bank4.webp" alt="..." style="position: absolute;top:40%"/>
+<img [src]="imagepath10"/>
+
+ <div class="Wrapper">
+<!-- <h1 style="align-items: center;">Welcome to Net Banking</h1> -->
+<h2>Select your Bank</h2>
+<div class="ch">
+    <input type="radio" name="NetBanking" id="HDFC Bank" value="HDFCBank"  [(ngModel)]="payment">HDFC Bank<br>
+</div>
+<div class="ch1">
+    <input type="radio" name="NetBanking" id="ICICI Bank" value="ICICIBank" [(ngModel)]="payment">ICICI Bank<br>
+</div>
+<div class="ch2">
+    <input type="radio" name="NetBanking" id="State Bank Of India" value="Sbi" [(ngModel)]="payment">State Bank Of India<br>
+</div>
+<div class="ch3">
+    <input type="radio" name="NetBanking" id="Axis Bank" value="Axis" [(ngModel)]="payment">Axis Bank<br>
+</div>
+<div class="ch4">
+    <input type="radio" name="NetBanking" id="Kotak" value="Kotak" [(ngModel)]="payment">Kotak Mahindra Bank<br>
+</div>
+
+<ul type="none" [ngSwitch]="payment">
+<li *ngSwitchCase="'HDFCBank'">
+  <form [formGroup]="formdata" (ngSubmit)="save()">
+    <header>
+      <img src="hdfc.png" class="img-thumbnail" alt="..." style="width: 0%;position:absolute;right: 5%" >
+      <img [src]="imagepath">
+    </header>
+    <div class="input_group1">
+      <label style="font-weight: bold;">Account Number: </label>
+    <input type="text" name="Account" placeholder ="xxxxxxx" formControlName="Account" class="hidden"/><br>
+    <div *ngIf="formdata.controls['Account'].invalid && formdata.controls['Account'].touched" class="alert alert-danger">
+    <div *ngIf="formdata.controls['Account'].errors.required">
+      Account Number is required.
+    </div>
+    </div> 
+    </div>
+    <div class="input_group2">
+      <label style="font-weight: bold">Re-enter Account Number: </label>
+    <input type="text" name="Re" placeholder ="xxxxxxx" formControlName="Re" class="hidden"/><br>
+    <div *ngIf="formdata.controls['Re'].invalid && formdata.controls['Re'].touched" class="alert alert-danger">
+    <div *ngIf="formdata.controls['Re'].errors.required">
+      Re-enter Account Number is required.
+    </div>
+    </div> 
+    </div>
+    <div class="input_group3">
+      <label style="font-weight: bold">IFSC code: </label>
+    <input type="text" name="IFSC" placeholder ="IFSC code" formControlName="IFSC" class="hidden"/><br>
+    <div *ngIf="formdata.controls['IFSC'].invalid && formdata.controls['IFSC'].touched" class="alert alert-danger">
+    <div *ngIf="formdata.controls['IFSC'].errors.required">
+      IFSC code is required.
+    </div>
+    </div> 
+</div>
+<div class="input_group4">
+  <label style="font-weight: bold">Account  Holder Name: </label>
+  <input type="text" name="Account_Holder" placeholder ="Sri Ram Murthi" formControlName="Account_Holder" class="hidden"/><br>
+  <div *ngIf="formdata.controls['Account_Holder'].invalid && formdata.controls['Account_Holder'].touched" class="alert alert-danger">
+  <div *ngIf="formdata.controls['Account_Holder'].errors.required">
+    Account  Holder Name is required.
+  </div>
+  </div> 
+</div>
+<div class="input_group5">
+  <input type="submit" value="Proceed For Payment" class="btn btn-primary" [disabled]="formdata.invalid">
+  </div>
+
+  </form>
+</li></ul>
+<ul type="none" [ngSwitch]="payment">
+  <li *ngSwitchCase="'ICICIBank'">
+    <form [formGroup]="formdata1" (ngSubmit)="save()" >
+      <header>
+        <img src="icici.jpg" class="img-thumbnail" alt="..." style="width: 0%;" >
+        <img [src]="imagepath1">
+      </header>
+      <div class="input_group1">
+        <label style="font-weight: bold;">Account Number: </label>
+      <input type="text" name="Account" placeholder ="xxxxxxx" formControlName="Account" class="hidden"/><br>
+      <div *ngIf="formdata1.controls['Account'].invalid && formdata1.controls['Account'].touched" class="alert alert-danger">
+      <div *ngIf="formdata1.controls['Account'].errors.required">
+        Account Number is required.
+      </div>
+      </div> 
+      </div>
+      <div class="input_group2">
+        <label style="font-weight: bold">Re-enter Account Number: </label>
+      <input type="text" name="Re" placeholder ="xxxxxxx" formControlName="Re" class="hidden"/><br>
+      <div *ngIf="formdata1.controls['Re'].invalid && formdata1.controls['Re'].touched" class="alert alert-danger">
+      <div *ngIf="formdata1.controls['Re'].errors.required">
+        Re-enter Account Number is required.
+      </div>
+      </div> 
+      </div>
+      <div class="input_group3">
+        <label style="font-weight: bold">IFSC code: </label>
+      <input type="text" name="IFSC" placeholder ="IFSC code" formControlName="IFSC" class="hidden"/><br>
+      <div *ngIf="formdata1.controls['IFSC'].invalid && formdata1.controls['IFSC'].touched" class="alert alert-danger">
+      <div *ngIf="formdata1.controls['IFSC'].errors.required">
+        IFSC code is required.
+      </div>
+      </div> 
+  </div>
+  <div class="input_group4">
+    <label style="font-weight: bold">Account  Holder Name: </label>
+    <input type="text" name="Account_Holder" placeholder ="Sri Ram Murthi" formControlName="Account_Holder" class="hidden"/><br>
+    <div *ngIf="formdata1.controls['Account_Holder'].invalid && formdata1.controls['Account_Holder'].touched" class="alert alert-danger">
+    <div *ngIf="formdata1.controls['Account_Holder'].errors.required">
+      Account  Holder Name is required.
+    </div>
+    </div> 
+</div>
+<div class="input_group5">
+  <input type="submit" value="Proceed For Payment" class="btn btn-primary" [disabled]="formdata1.invalid">
+  </div>
+    </form>
+  </li></ul>
+  
+  <ul type="none" [ngSwitch]="payment">
+    <li *ngSwitchCase="'Sbi'">
+      <form [formGroup]="formdata2"  (ngSubmit)="save()">
+        <header>
+          <img src="sbi.png" class="img-thumbnail" alt="..." style="width: 0%;" >
+          <img [src]="imagepath2">
+        </header>
+        <div class="input_group1">
+          <label style="font-weight: bold;">Account Number: </label>
+        <input type="text" name="Account" placeholder ="xxxxxxx" formControlName="Account" class="hidden"/><br>
+        <div *ngIf="formdata2.controls['Account'].invalid && formdata2.controls['Account'].touched" class="alert alert-danger">
+        <div *ngIf="formdata2.controls['Account'].errors.required">
+          Account Number is required.
+        </div>
+        </div> 
+        </div>
+        <div class="input_group2">
+          <label style="font-weight: bold">Re-enter Account Number: </label>
+        <input type="text" name="Re" placeholder ="xxxxxxx" formControlName="Re" class="hidden"/><br>
+        <div *ngIf="formdata2.controls['Re'].invalid && formdata2.controls['Re'].touched" class="alert alert-danger">
+        <div *ngIf="formdata2.controls['Re'].errors.required">
+          Re-enter Account Number is required.
+        </div>
+        </div> 
+        </div>
+        <div class="input_group3">
+          <label style="font-weight: bold">IFSC code: </label>
+        <input type="text" name="IFSC" placeholder ="IFSC code" formControlName="IFSC" class="hidden"/><br>
+        <div *ngIf="formdata2.controls['IFSC'].invalid && formdata2.controls['IFSC'].touched" class="alert alert-danger">
+        <div *ngIf="formdata2.controls['IFSC'].errors.required">
+          IFSC code is required.
+        </div>
+        </div> 
+    </div>
+    <div class="input_group4">
+      <label style="font-weight: bold">Account  Holder Name: </label>
+      <input type="text" name="Account_Holder" placeholder ="Sri Ram Murthi" formControlName="Account_Holder" class="hidden"/><br>
+      <div *ngIf="formdata2.controls['Account_Holder'].invalid && formdata2.controls['Account_Holder'].touched" class="alert alert-danger">
+      <div *ngIf="formdata2.controls['Account_Holder'].errors.required">
+        Account  Holder Name is required.
+      </div>
+      </div> 
+  </div>
+  <div class="input_group5">
+    <input type="submit" value="Proceed For Payment" class="btn btn-primary" [disabled]="formdata2.invalid">
+    </div>
+      </form >
+    </li></ul>
+    <ul type="none" [ngSwitch]="payment">
+      <li *ngSwitchCase="'Axis'">
+        <form [formGroup]="formdata3" (ngSubmit)="save()">
+          <header>
+            <img src="axis.png" class="img-thumbnail" alt="..." style="width: 0%;" >
+            <img [src]="imagepath3">
+          </header>
+          <div class="input_group1">
+            <label style="font-weight: bold;">Account Number: </label>
+          <input type="text" name="Account" placeholder ="xxxxxxx" formControlName="Account" class="hidden"/><br>
+          <div *ngIf="formdata3.controls['Account'].invalid && formdata3.controls['Account'].touched" class="alert alert-danger">
+          <div *ngIf="formdata3.controls['Account'].errors.required">
+            Account Number is required.
+          </div>
+          </div> 
+          </div>
+          <div class="input_group2">
+            <label style="font-weight: bold">Re-enter Account Number: </label>
+          <input type="text" name="Re" placeholder ="xxxxxxx" formControlName="Re" class="hidden"/><br>
+          <div *ngIf="formdata3.controls['Re'].invalid && formdata3.controls['Re'].touched" class="alert alert-danger">
+          <div *ngIf="formdata3.controls['Re'].errors.required">
+            Re-enter Account Number is required.
+          </div>
+          </div> 
+          </div>
+          <div class="input_group3">
+            <label style="font-weight: bold">IFSC code: </label>
+          <input type="text" name="IFSC" placeholder ="IFSC code" formControlName="IFSC" class="hidden"/><br>
+          <div *ngIf="formdata3.controls['IFSC'].invalid && formdata3.controls['IFSC'].touched" class="alert alert-danger">
+          <div *ngIf="formdata3.controls['IFSC'].errors.required">
+            IFSC code is required.
+          </div>
+          </div> 
+      </div>
+      <div class="input_group4">
+        <label style="font-weight: bold">Account  Holder Name: </label>
+        <input type="text" name="Account_Holder" placeholder ="Sri Ram Murthi" formControlName="Account_Holder" class="hidden"/><br>
+        <div *ngIf="formdata3.controls['Account_Holder'].invalid && formdata3.controls['Account_Holder'].touched" class="alert alert-danger">
+        <div *ngIf="formdata3.controls['Account_Holder'].errors.required">
+          Account  Holder Name is required.
+        </div>
+        </div> 
+    </div>
+    <div class="input_group5">
+      <input type="submit" value="Proceed For Payment" class="btn btn-primary" [disabled]="formdata3.invalid">
+      </div>
+        </form>
+      </li></ul>
+
+      <ul type="none" [ngSwitch]="payment">
+        <li *ngSwitchCase="'Kotak'">
+          <form [formGroup]="formdata4" (ngSubmit)="save()">
+            <header>
+              <img src="kotak.png" class="img-thumbnail" alt="..." style="width: 0%;" >
+              <img [src]="imagepath4">
+            </header>
+            <div class="input_group1">
+              <label style="font-weight: bold;">Account Number: </label>
+            <input type="text" name="Account" placeholder ="xxxxxxx" formControlName="Account" class="hidden"/><br>
+            <div *ngIf="formdata4.controls['Account'].invalid && formdata4.controls['Account'].touched" class="alert alert-danger">
+            <div *ngIf="formdata4.controls['Account'].errors.required">
+              Account Number is required.
+            </div>
+            </div> 
+            </div>
+            <div class="input_group2">
+              <label style="font-weight: bold">Re-enter Account Number: </label>
+            <input type="text" name="Re" placeholder ="xxxxxxx" formControlName="Re" class="hidden"/><br>
+            <div *ngIf="formdata4.controls['Re'].invalid && formdata4.controls['Re'].touched" class="alert alert-danger">
+            <div *ngIf="formdata4.controls['Re'].errors.required">
+              Re-enter Account Number is required.
+            </div>
+            </div> 
+            </div>
+            <div class="input_group3">
+              <label style="font-weight: bold">IFSC code: </label>
+            <input type="text" name="IFSC" placeholder ="IFSC code" formControlName="IFSC" class="hidden"/><br>
+            <div *ngIf="formdata4.controls['IFSC'].invalid && formdata4.controls['IFSC'].touched" class="alert alert-danger">
+            <div *ngIf="formdata4.controls['IFSC'].errors.required">
+              IFSC code is required.
+            </div>
+            </div> 
+        </div>
+        <div class="input_group4">
+          <label style="font-weight: bold">Account  Holder Name: </label>
+          <input type="text" name="Account_Holder" placeholder ="Sri Ram Murthi" formControlName="Account_Holder" class="hidden"/><br>
+          <div *ngIf="formdata4.controls['Account_Holder'].invalid && formdata4.controls['Account_Holder'].touched" class="alert alert-danger">
+          <div *ngIf="formdata4.controls['Account_Holder'].errors.required">
+            Account  Holder Name is required.
+          </div>
+          </div> 
+      </div>
+      <div class="input_group5">
+        <input type="submit" value="Proceed For Payment" class="btn btn-primary" [disabled]="formdata4.invalid">
+        </div>
+          </form>
+        </li></ul>
+        <footer>
+    <img src="footer5.png" class="img-thumbnail" alt="...">
+                  <img [src]="imagepath5">
+        
+  </footer>
+ </div>
+</body>

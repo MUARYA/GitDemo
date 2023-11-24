@@ -1,0 +1,56 @@
+.in{
+    position:absolute;
+    left: 25%;
+   
+    width: max-content;
+    max-height: fit-content;
+}
+.input_group1{
+    position: fixed;
+   right:40%;
+   top:30%;
+   color: aliceblue;
+   font-size: large;
+   font-weight: bolder;
+  }
+  .input_group2{
+    position: fixed;
+   right: 40%;
+   top:40%;
+   color: aliceblue;
+   font-size: large;
+   font-weight: bolder;
+  }
+  .input_group3{
+    position: fixed;
+   right:40%;
+   top:50%;
+   color: aliceblue;
+   font-size: large;
+   font-weight: bolder;
+  }
+  .input_group4{
+    position: fixed;
+   right: 40%;
+   top:60%;
+    color: aliceblue;
+   font-size: large;
+   font-weight: bolder;
+  }
+  .input_group5{
+    position: fixed;
+   right: 40%;
+   top:70%;
+   color: aliceblue;
+   font-size: large;
+   font-weight: bolder;
+  }
+  .input_group6{
+    position: fixed;
+   right: 43%;
+   top:85%;
+   color: aliceblue;
+   font-size: large;
+   font-weight: bolder;
+  }
+  

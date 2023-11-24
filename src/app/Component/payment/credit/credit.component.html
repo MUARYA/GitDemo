@@ -1,0 +1,69 @@
+
+
+<div class="sty" style="background-color: rgb(110, 194, 194);width: 1000%; ">
+    <ul type="none">
+      <li><a routerLink="/gateway" routerLinkActive="active" class="nav-link text-white">Back</a>
+      </li>
+    </ul>
+    </div>
+    
+    <img src="credit.jpg"/>
+<img [src]="imagepath" style="position:absolute;left:50%;width:50%;height:100%;"/>
+<img src="credit2.jpg"/>
+<img [src]="imagepath2" style="position:absolute;left: 0%; width:50%;height: 100%;"/>
+
+
+      <form [formGroup]="formdata" (ngSubmit)="save()" >
+        <div class="input_group1 ">
+            <label>Card Number  : </label>
+        <input type="text" name="card_number" placeholder ="xxxx xxxx xxxx xxxxx" formControlName="card_number"/><br>
+        <div *ngIf="formdata.controls['card_number'].invalid && formdata.controls['card_number'].touched" class="alert alert-danger">
+        <div *ngIf="formdata.controls['card_number'].errors.required">
+        card number is required.
+        </div>
+        </div> 
+        </div>
+        <div class="input_group2">
+      <label>CVV  : </label>
+        <input type="text" name="type" placeholder ="xxxx" formControlName="CVV"/><br>
+        <div *ngIf="formdata.controls['CVV'].invalid && formdata.controls['CVV'].touched" class="alert alert-danger">
+        <div *ngIf="formdata.controls['CVV'].errors.required">
+        CVV is required.
+        </div>
+        </div> 
+        </div>
+        <div class="input_group3">
+            <label>Month  : </label>
+        <input type="number" name="MM" placeholder ="08" formControlName="MM"/><br>
+        <div *ngIf="formdata.controls['MM'].invalid && formdata.controls['MM'].touched" class="alert alert-danger">
+        <div *ngIf="formdata.controls['MM'].errors.required">
+        Month is required.
+        </div>
+        </div> 
+    </div>
+    <div class="input_group4">
+        <label>Year  : </label>
+    <input type="number" name="yy" placeholder ="2022" formControlName="yy"/><br>
+    <div *ngIf="formdata.controls['yy'].invalid && formdata.controls['yy'].touched" class="alert alert-danger">
+    <div *ngIf="formdata.controls['yy'].errors.required">
+    Year is required.
+    </div>
+    </div> 
+</div>
+<div class="input_group5">
+<label>Name On Card  : </label>
+<input type="text" name="Name" placeholder ="Rao Sharma" formControlName="Name"/><br>
+<div *ngIf="formdata.controls['Name'].invalid && formdata.controls['Name'].touched" class="alert alert-danger">
+<div *ngIf="formdata.controls['Name'].errors.required">
+card number is required.
+</div>
+</div> 
+</div>
+<div class="input_group6">
+    <input type="submit" value="Proceed For Payment" class="btn btn-primary" [disabled]="formdata.invalid">
+    </div>
+
+      </form>
+    
+    
+

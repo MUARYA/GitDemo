@@ -1,0 +1,117 @@
+.box1{
+    position: fixed;
+    top:20%;
+    right: 40%;
+    font-weight: bolder;
+    
+   }
+   
+.bg{
+    background-color: rgb(239, 215, 183);
+}
+  .Wrapper h1{
+    position: fixed;
+    left:30%;
+    top:2%;
+    background-color: rgb(177, 231, 237);
+    font-size:300%;
+    font-weight: bolder;
+    font-style: italic;
+ color:blue ;
+    
+   }
+   
+  .ch{
+    position:fixed;
+    left:40%;
+    top :30%;
+    font-weight: bolder;
+    font-size: larger;
+   
+  }
+  
+  .ch1{
+    position: fixed;
+    left:40%;
+    top :40%;
+    font-weight: bolder;
+    font-size: larger;
+  }
+  .ch2{
+    position: fixed;
+    left:40%;
+    top:50%;
+    font-weight: bolder;
+    font-size: larger;
+  }
+  .ch3{
+    position: fixed;
+    left:40%;
+    top:60%;
+    font-weight: bolder;
+    font-size: larger;
+  }
+  .ch4{
+    position: fixed;
+    left:40%;
+    top:70%;
+    font-weight: bolder;
+    font-size: larger;
+  }
+  .input_group1{
+    position: fixed;
+   right: 5%;
+   top:50%;
+  }
+  .input_group2{
+    position: fixed;
+   right: 5%;
+   top:60%;
+  }
+  .input_group3{
+    position: fixed;
+   right: 5%;
+   top:70%;
+  }
+  .input_group4{
+    position: fixed;
+   right: 5%;
+   top:80%;
+  }
+  .input_group4{
+    position: fixed;
+   right: 5%;
+   top:80%;
+  }
+  .input_group5{
+    position: fixed;
+   right: 46%;
+   top:80%;
+  }
+  header{
+    position: fixed;
+    right: 5%;
+    top:20%;
+  }
+  .img1{
+    position: fixed;
+    top:0%;
+  }
+  footer{
+    position: fixed;
+    top:80%;
+    width:0%;
+    left: 20%;
+  } 
+  .Wrapper h2{
+    position: fixed;
+    left:40%;
+    top:17%;
+    color: blue;
+    background-color: antiquewhite;
+  }
+  .img1{
+    position: fixed;
+    top: 40%;
+  }
+  

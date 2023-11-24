@@ -1,0 +1,102 @@
+<body>
+    <style>
+        
+     
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+
+</style>
+
+
+<div class="sty">
+<ul>
+  <li><a routerLink="/payment" routerLinkActive="active" class="nav-link text-white">Back</a>
+  </li>
+</ul>
+</div>
+<img src="payment5.png" class="img-thumbnail" alt="...">
+                    <img [src]="imagepath2" style="width:37%;">
+<div class="wrapper">
+<form action="/action_page.php">
+   
+    <div class="input_group">
+        <h4 >
+            Select Method For Payment
+        </h4>
+    </div>
+    
+     <div class="ch">
+    <input type="radio" name="PAYMENTS" id="UPI" value="UPI" [(ngModel)]="payment" >UPI<br>
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16"style="position: absolute;left:105%;top:1%">
+      <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708z"/>
+      <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
+    </svg>
+  </div>
+  <div class="ch1">
+ <input type="radio" name="PAYMENTS" id="Credit/Debit/ATM Card" value="Credit/Debit/ATMCard" [(ngModel)]="payment"><a routerLink="/credit" routerLinkActive="active" class="text-dark">Credit/Debit/ATM Card</a><br>
+ <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-credit-card-2-front-fill" viewBox="0 0 16 16" style="position: absolute;left:105%;top:1%">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+</svg>
+</div>  
+ <div class="ch2">
+      <input type="radio" name="PAYMENTS" id="Net Banking" value="NetBanking" [(ngModel)]="payment"><a routerLink="/net" routerLinkActive="active" class="text-dark">Net Banking</a><br>
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bank2" viewBox="0 0 16 16"style="position: absolute;left:105%;top:3%">
+        <path d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916l-7.5-5zM12.375 6v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zm-2.5 0v7h-1.25V6h1.25zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1H.5z"/>
+      </svg>
+    </div>
+
+    <ul type="none" [ngSwitch]="payment">
+        <li *ngSwitchCase="'UPI'">
+          <div class="ch3">
+            <input type="radio" name="upi" id="Google Pay" value="Google Pay " (click)="save()">Google Pay<br>
+            <img [src]="imagepath" style="width:40%; position :absolute;top:2%;right: -70%;">
+          </div>
+          <div class="ch4">
+            <input type="radio" name="upi" id="Paytm" value="Paytm" (click)="save()">Paytm<br>
+            <img [src]="imagepath1" style="width:90%; position :absolute;top:3%;right: -90%">
+            </div>
+            <div class="ch5">
+            <input type="radio" name="upi" id="Phone Pay" value="Phone Pay" (click)="save()">Phone Pay<br>
+            <img [src]="imagepath3" style="width:70%; position :absolute;top:8%;right: -78%">
+            </div>
+           
+        </li>
+
+    </ul>
+     
+       </form>
+       </div>
+       </body>
+       
+    <footer>
+      <img src="footer3.jpg"  alt="...">
+                    <img [src]="imagepath4">
+    </footer>
+    <!-- <div class="input_group6">
+      <input type="submit" value="Continue" class="btn btn-primary" [disabled]="formdata.invalid">
+      </div>  -->
+    
+  
+  
+  
+  
+  
+
+
+
+

@@ -1,0 +1,163 @@
+<ul class="btn btn-info" >
+    <li class="btn btn-info"><a routerLink="/show/62">Back</a></li>
+    
+  </ul>
+<body >
+    <div class="image">
+   <img src="pay3.jpg" >
+   <img  [src]="imagepath" class="img-thumbnail" alt="..." />
+
+<div class="wrapper">
+<h2 style="font-family: Arial, Helvetica, sans-serif;">Payment Form</h2>
+
+<form [formGroup]="formdata" (ngSubmit)="savePayment()">
+<h5 style="font-family: Arial, Helvetica, sans-serif;align-items: center;">
+    Payment Details
+</h5>
+
+<div class="input_group10">
+    <input type="text" name="id" placeholder ="Enter id" formControlName="id"/><br>
+    <div *ngIf="formdata.controls['id'].invalid && formdata.controls['id'].touched" class="alert alert-danger">
+    <div *ngIf="formdata.controls['id'].errors.required">
+    payment id is required.
+    </div>
+    </div> 
+    </div>
+<div class="input_group1">
+    <label for="type" style="font-weight: bold;">Payment Type </label>
+    <select name="type" formControlName = "type"  id="type" class="form-control form-control-lg" >
+        <option value="User" >CREDIT_CARD</option>
+        <option value="User" >DEBIT_CARD</option>
+        <option value="User" >INTERNET_BANKING</option>
+       
+    </select><br>
+    
+<div *ngIf="formdata.controls['type'].invalid && formdata.controls['type'].touched" class="alert alert-danger">
+<div *ngIf="formdata.controls['type'].errors.required">
+Payment type is required.
+</div>
+</div> 
+</div>
+<div class="input_group2">
+<input type="date" min="2022-08-13" max="2022-08-18" name="paymentDate" placeholder ="Enter PaymentDate" formControlName="paymentDate"/><br>
+<div *ngIf="formdata.controls['paymentDate'].invalid && formdata.controls['paymentDate'].touched" class="alert alert-danger">
+<div *ngIf="formdata.controls['paymentDate'].errors.required">
+Payment Date is required.
+</div>
+</div> 
+</div>
+<div class="input_group4">
+<input type="text" name="amountPaid" placeholder ="Enter Amount Paid" formControlName="amountPaid"/><br>
+<div *ngIf="formdata.controls['amountPaid'].invalid && formdata.controls['amountPaid'].touched" class="alert alert-danger">
+<div *ngIf="formdata.controls['amountPaid'].errors.required">
+Amount is required.
+</div>
+</div> 
+</div>
+
+<div class ="user">
+<h5>Users Details</h5>
+</div>
+
+<div class="input_group5">
+    <input type="date"  name="create_At" placeholder ="Enter CreateDate" formControlName="create_At"/><br>
+    <div *ngIf="formdata.controls['create_At'].invalid && formdata.controls['create_At'].touched" class="alert alert-danger">
+    <div *ngIf="formdata.controls['create_At'].errors.required">
+    Create Date is required.
+    </div>
+    </div> 
+    </div>
+    <div class="input_group14">
+        <input type="date"  name="updated_At" placeholder ="Enter UpdateDate" formControlName="updated_At"/><br>
+        <div *ngIf="formdata.controls['updated_At'].invalid && formdata.controls['updated_At'].touched" class="alert alert-danger">
+        <div *ngIf="formdata.controls['updated_At'].errors.required">
+        update Date is required.
+        </div>
+        </div> 
+        </div>
+        <div class="input_group13">
+            <input type="number" name="planId" placeholder ="Enter planId" formControlName="planId"/><br>
+            <div *ngIf="formdata.controls['planId'].invalid && formdata.controls['planId'].touched" class="alert alert-danger">
+            <div *ngIf="formdata.controls['planId'].errors.required">
+            Plan Id  is required.
+            </div>
+            </div> 
+            </div>
+<div class ="input_group6">
+<input type="text" name="firstName" placeholder ="Enter First Name" formControlName="firstName"/><br>
+<div *ngIf="formdata.controls['firstName'].invalid && formdata.controls['firstName'].touched" class="alert alert-danger">
+<div *ngIf="formdata.controls['firstName'].errors.required">
+First Name is required.
+</div>
+</div> 
+</div>
+<div class="input_group7">
+<input type="text" name="lastName" placeholder="Enter Last Name" formControlName="lastName"/><br>
+<div *ngIf="formdata.controls['lastName'].invalid && formdata.controls['lastName'].touched" class="alert alert-danger">
+<div *ngIf="formdata.controls['lastName'].errors.required">
+Last Name is required.
+</div>
+</div>
+</div>
+<div class="input_group8">
+<input type="email" name="email" placeholder="Enter Email" formControlName="email"/><br>
+<div *ngIf="formdata.controls['email'].invalid && formdata.controls['email'].touched" class="alert alert-danger">
+<div *ngIf="formdata.controls['email'].errors.required">
+Email is is required.
+</div>
+</div>
+</div>
+<div class="input_group9">
+<input type="tel" name="mobile" placeholder="Enter Mobile no" formControlName="mobile"/><br>
+
+<div *ngIf="formdata.controls['mobile'].invalid && formdata.controls['mobile'].touched" class="alert alert-danger">
+<div *ngIf="formdata.controls['mobile'].errors.required">
+
+Mobile number is required.
+
+</div>
+</div>
+</div>      
+<!-- <div class="input_group10">
+<input type="text" name="isActive" placeholder="status" formControlName="isActive"/><br>
+<div *ngIf="formdata.controls['isActive'].invalid && formdata.controls['isActive'].touched" class="alert alert-danger">
+<div *ngIf="formdata.controls['isActive'].errors.required">
+Status is  required.
+</div>
+</div></div> -->
+<div class="input_group11">
+<input type="submit" value="Register" class="btn btn-primary" [disabled]="formdata.invalid">
+</div>
+
+
+</form>
+</div>
+    </div></body>
+    <footer >
+          
+        <img src="footer3.png" class="img-thumbnail" alt="..." >
+        <img [src]="imagepath1">
+    </footer> 
+<!-- <hr>
+<table class="table table-bordered" style="background-color: rgb(165, 222, 243)">
+<tr *ngIf="payments.length > 0">
+    <th>Payment Id</th>
+    <th>Payment Type</th>
+    <th>Payment Date</th>
+    <th>Amount Paid</th>
+    <th>Payment Status</th>
+     
+ </tr>
+<tr *ngFor="let pay of payments">
+    <td>{{pay.paymentId}}</td>
+    <td>{{pay.type}}</td> 
+     <td>{{pay.paymentDate}}</td>
+    <td>{{pay.amountPaid}}</td>
+     <td>{{pay.status}}</td> 
+      < <td><input type="button" (click)="deletePayment(pay.paymentId)" value="Delete" class="btn btn-primary"></td> -->
+       <!-- <td><input type="button" (click)="UpdatePayment(pay)"value="Update" class="btn btn-primary"></td> -->
+    <!-- <td><button (click)="onClickSubmit(pay.paymentId)">update payment</button></td>  -->
+<!-- </tr>
+</table>  -->
+
+
